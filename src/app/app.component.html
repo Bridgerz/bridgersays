@@ -1,0 +1,49 @@
+<button (click)="highScore()" mat-icon-button color="#FFD700" class="high-score">
+		<mat-icon style="color:#FFD700;">star</mat-icon>
+	  </button>
+
+<div style="text-align: center;">
+	<h1 style="text-align: center; margin-top:10px;">Bridger Says</h1>
+	<div class="row" style="width:200px; margin:auto;">
+		<div class="col">
+			<button [class.disButton]="Game.inGame" [disabled]="Game.inGame" mat-raised-button (click)="Game.start()"
+				style="margin:auto; margin-top:10px; margin-bottom:30px">Start</button>
+		</div>
+		<div class="col">
+			<button [class.disButton]="!Game.inGame" [disabled]="!Game.inGame" mat-raised-button (click)="Game.reset()"
+				style="margin:auto; margin-top:10px; margin-bottom:30px">Reset</button>
+		</div>
+	</div>
+</div>
+<div  [style.width.px]="gameWidth" 
+[style.height.px]="gameHeight" class="simon-container">
+	<div class="row " style="height:50%; margin:0px">
+		<div class="col green simon-button" [style.opacity]="getOpacity(Game.greenOn)" id="green"
+			(click)="pressButton('green')">
+		</div>
+		<div class="col red simon-button" [style.opacity]="getOpacity(Game.redOn)" id="red"
+			(click)="pressButton('red')">
+
+		</div>
+	</div>
+	<div class="row" style="height:50%; margin:0px">
+		<div class="col yellow simon-button" [style.opacity]="getOpacity(Game.yellowOn)" id="yellow"
+			(click)="pressButton('yellow')">
+
+		</div>
+		<div class="col blue simon-button" [style.opacity]="getOpacity(Game.blueOn)" id="blue"
+			(click)="pressButton('blue')">
+
+		</div>
+	</div>
+	<div class="center-circle">
+	</div>
+</div>
+<div class="Status">
+	<h1>{{Game.status}}</h1>
+</div>
+<div class="Score" [hidden]="!Game.inGame">
+	<div style="text-align: center;">
+		<h1 *ngIf="Game.Pattern.length > 0">Score: {{Game.Pattern.length - 1 }}</h1>
+	</div>
+</div>

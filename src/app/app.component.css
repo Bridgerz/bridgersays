@@ -1,0 +1,72 @@
+.center-circle {
+    background-color: black;
+    width: 45%; 
+    height:45%; 
+    border-radius: 100%; 
+    margin:auto; 
+    margin-top:-70%; 
+    position: relative;
+}
+
+.high-score{
+    position: absolute;
+    right: 0;
+    outline: none;
+    margin-right:7px;
+}
+
+.blue {
+    background-color: blue; 
+    margin-top:10px; 
+    margin-left:10px; 
+    border-bottom-right-radius: 100%;
+}
+
+.yellow {
+    background-color: yellow; 
+    margin-top:10px; 
+    margin-right:10px; 
+    border-bottom-left-radius: 100%;
+}
+
+.red {
+    background-color: red;
+    margin-bottom:10px; 
+    margin-left:10px; 
+    border-top-right-radius: 100%;
+}
+
+.green {
+    background-color: green; 
+    margin-bottom:10px; 
+    margin-right:10px; 
+    border-top-left-radius: 100%;
+}
+
+.simon-container {
+    background-color: black; 
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto; 
+    padding:20px; 
+    border-radius: 100%;
+}
+
+.simon-button {
+    cursor: pointer;
+}
+
+.disButton{
+    background-color: #424242 !important;
+}
+
+.Status{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Score{
+    position: absolute;
+    width: 100%;
+    bottom: 0
+}
